@@ -8,12 +8,13 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { Reveal } from "@/components/Reveal";
 import { CountryBriefPicker } from "@/components/CountryBriefPicker";
+import { HeroWave } from "@/components/HeroWave";
 
 export default function Home() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-brand-purple to-brand-cyan text-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-brand-purple to-brand-cyan pb-24 text-white sm:pb-32">
         <div className="adipa-hero-orb h-72 w-72 -left-16 -top-16 text-white" />
         <div className="adipa-hero-orb adipa-hero-orb-slow h-56 w-56 right-0 top-24 text-white" />
         <div className="relative mx-auto max-w-3xl px-4 py-20 text-center sm:px-6 lg:px-8">
@@ -44,6 +45,7 @@ export default function Home() {
             </a>
           </Reveal>
         </div>
+        <HeroWave />
       </section>
 
       {/* De qué se trata */}

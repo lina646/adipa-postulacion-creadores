@@ -1,20 +1,25 @@
 "use client";
 
 import { useState } from "react";
-import { DownloadSimple } from "@phosphor-icons/react";
+import { DownloadSimple, ArrowSquareOut } from "@phosphor-icons/react";
 
 type Country = "colombia" | "mexico";
 
-const COUNTRIES: Record<Country, { label: string; flag: string; file: string }> = {
+const COUNTRIES: Record<
+  Country,
+  { label: string; flag: string; brief: string; courses: string }
+> = {
   colombia: {
     label: "Colombia",
     flag: "🇨🇴",
-    file: "/briefs/adipa-brief-colombia.pdf",
+    brief: "/briefs/adipa-brief-colombia.pdf",
+    courses: "https://adipa.co/cursos?page=1&per_page=24&mod=asincronica",
   },
   mexico: {
     label: "México",
     flag: "🇲🇽",
-    file: "/briefs/adipa-brief-mexico.pdf",
+    brief: "/briefs/adipa-brief-mexico.pdf",
+    courses: "https://adipa.mx/cursos?page=1&per_page=24",
   },
 };
 
@@ -24,9 +29,10 @@ export function CountryBriefPicker() {
 
   return (
     <div className="adipa-card p-6">
-      <h3 className="text-lg font-semibold text-brand-navy">Brief completo por país</h3>
+      <h3 className="text-lg font-semibold text-brand-navy">Elige tu país</h3>
       <p className="mt-2 text-[15px] text-brand-navy/80">
-        Elige tu país para descargar el brief con el detalle de tu curso disponible.
+        Consulta los cursos asincrónicos disponibles y descarga el brief con el detalle de tu
+        colaboración.
       </p>
       <div className="mt-4 flex gap-2">
         {(Object.keys(COUNTRIES) as Country[]).map((key) => (
@@ -44,15 +50,26 @@ export function CountryBriefPicker() {
           </button>
         ))}
       </div>
-      <a
-        href={current.file}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-5 inline-flex items-center gap-2 rounded-adipa bg-brand-navy px-5 py-2.5 text-sm font-semibold text-white transition hover:scale-[1.02]"
-      >
-        <DownloadSimple size={18} weight="bold" />
-        Descargar brief {current.label}
-      </a>
+      <div className="mt-5 flex flex-wrap gap-3">
+        <a
+          href={current.courses}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-adipa bg-brand-purple px-5 py-2.5 text-sm font-semibold text-white transition hover:scale-[1.02]"
+        >
+          <ArrowSquareOut size={18} weight="bold" />
+          Ver cursos asincrónicos {current.label}
+        </a>
+        <a
+          href={current.brief}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-adipa border border-brand-navy/15 bg-white px-5 py-2.5 text-sm font-semibold text-brand-navy transition hover:scale-[1.02]"
+        >
+          <DownloadSimple size={18} weight="bold" />
+          Descargar brief
+        </a>
+      </div>
     </div>
   );
 }
