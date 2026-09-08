@@ -38,3 +38,29 @@ body {
   opacity: 0.1;
   filter: blur(0px);
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes adipa-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(12px, -18px) scale(1.05); }
+}
+
+.adipa-hero-orb {
+  animation: adipa-float 9s ease-in-out infinite;
+}
+
+.adipa-hero-orb-slow {
+  animation-duration: 13s;
+}
+
+@keyframes adipa-pulse-arrow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+.adipa-cta-arrow {
+  animation: adipa-pulse-arrow 1.6s ease-in-out infinite;
+}
