@@ -9,6 +9,7 @@ import {
 import { Reveal } from "@/components/Reveal";
 import { CountryBriefPicker } from "@/components/CountryBriefPicker";
 import { HeroWave } from "@/components/HeroWave";
+import { Testimonials } from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -36,13 +37,21 @@ export default function Home() {
             </p>
           </Reveal>
           <Reveal delay={300}>
-            <a
-              href="#postulacion"
-              className="mt-8 inline-flex items-center gap-2 rounded-adipa bg-white px-6 py-3 text-sm font-semibold text-brand-purple transition hover:scale-[1.03] hover:bg-white/90"
-            >
-              Quiero postularme
-              <ArrowDown size={18} weight="bold" className="adipa-cta-arrow" />
-            </a>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="#postulacion"
+                className="inline-flex items-center gap-2 rounded-adipa bg-white px-6 py-3 text-sm font-semibold text-brand-purple transition hover:scale-[1.03] hover:bg-white/90"
+              >
+                Quiero postularme
+                <ArrowDown size={18} weight="bold" className="adipa-cta-arrow" />
+              </a>
+              <a
+                href="#ejemplos"
+                className="inline-flex items-center gap-2 rounded-adipa border border-white/60 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
+              >
+                Ver videos de ejemplo
+              </a>
+            </div>
           </Reveal>
         </div>
         <HeroWave />
@@ -53,13 +62,9 @@ export default function Home() {
         <Reveal>
           <h2 className="text-2xl font-bold text-brand-navy">¿De qué se trata esta colaboración?</h2>
           <p className="mt-4 text-[15px] leading-relaxed text-brand-navy/80">
-            En ADIPA estamos trabajando con creadoras y creadores UGC — estudiantes y profesionales
-            de psicología o carreras afines — que quieran compartir su experiencia real con
-            nuestros cursos o seminarios a través de un video corto y orgánico.
-          </p>
-          <p className="mt-3 text-[15px] leading-relaxed text-brand-navy/80">
-            No es una vocería académica, ni una colaboración paga. Es un intercambio puntual y
-            claro.
+            En ADIPA buscamos estudiantes y profesionales de psicología o carreras afines que
+            quieran compartir su experiencia real con nuestros cursos a través de videos cortos,
+            creativos y auténticos. 🎥✨
           </p>
         </Reveal>
       </section>
@@ -95,13 +100,13 @@ export default function Home() {
       </section>
 
       {/* Videos de ejemplo */}
-      <section className="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
+      <section id="ejemplos" className="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
         <Reveal>
           <h2 className="text-center text-2xl font-bold text-brand-navy">
-            Así se ve un video de ejemplo
+            Videos de ejemplo 🚀
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-[15px] text-brand-navy/80">
-            Contenido real, grabado con el celular, tal como lo pedimos: cercano y auténtico.
+            Contenido real, cercano y auténtico.
           </p>
         </Reveal>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
@@ -128,8 +133,10 @@ export default function Home() {
         </div>
       </section>
 
+      <Testimonials />
+
       {/* Contenido esperado vs no incluir */}
-      <section className="bg-brand-soft py-14">
+      <section className="py-14">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <h2 className="text-2xl font-bold text-brand-navy">Tipo de contenido esperado</h2>
@@ -197,12 +204,12 @@ export default function Home() {
             </p>
           </Reveal>
           <Reveal delay={150}>
-            <div className="mt-8 flex justify-center">
+            <div className="adipa-card mt-8 flex justify-center overflow-hidden p-2 sm:p-3">
               <iframe
                 src="https://forms.monday.com/forms/embed/b98d918383c4bdde9cfaad7d1de693ce?r=use1"
                 width="650"
                 height="500"
-                style={{ border: 0, boxShadow: "5px 5px 56px 0px rgba(0,0,0,0.25)" }}
+                style={{ border: 0 }}
                 className="w-full max-w-[650px] rounded-adipa"
               />
             </div>
