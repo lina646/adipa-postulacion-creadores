@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --adipa-card-bg: #ffffff;
+  --adipa-card-border: #e3e8f3;
+  --adipa-card-shadow: 0 1px 3px rgb(0 0 0 / 0.15);
+  --adipa-card-hover-border: rgba(112, 78, 253, 0.24);
+  --adipa-card-hover-shadow: 0 6px 18px rgb(19 1 63 / 0.08);
+}
+
+body {
+  color: #091e42;
+  background: #ffffff;
+}
+
+.adipa-card {
+  background: var(--adipa-card-bg);
+  border: 1px solid var(--adipa-card-border);
+  border-radius: 8px;
+  box-shadow: var(--adipa-card-shadow);
+}
+
+.adipa-card-interactive {
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.adipa-card-interactive:hover {
+  border-color: var(--adipa-card-hover-border);
+  box-shadow: var(--adipa-card-hover-shadow);
+}
+
+.adipa-hero-orb {
+  position: absolute;
+  border-radius: 9999px;
+  background: currentColor;
+  opacity: 0.1;
+  filter: blur(0px);
+}
