@@ -18,10 +18,15 @@ aprobación, cupón, seguimiento, recordatorios) ya funciona bien hoy en Monday 
 1. **Landing pública** — explica qué es ADIPA, en qué consiste la colaboración UGC, qué se
    ofrece (acceso a curso asincrónico vía cupón), qué se pide (2 videos verticales) y para quién
    es. Sigue la identidad visual de `DESIGN.md`.
-2. **Formulario de postulación** — el formulario nativo de Monday, embebido (iframe) dentro de
+2. **Videos de ejemplo** — 2 videos reales de creadores anteriores, embebidos con reproductor
+   nativo (`<video>`), para mostrar el tipo de contenido esperado.
+3. **Selector de brief por país** — botones Colombia/México que muestran un enlace de descarga
+   al brief PDF de cada país (el valor del cupón sí aparece dentro del PDF, ya en el contexto
+   correcto de su país — no se muestra un precio genérico suelto en la landing).
+4. **Formulario de postulación** — el formulario nativo de Monday, embebido (iframe) dentro de
    la misma landing. Captura: nombre, edad, teléfono, correo, usuario de IG/TikTok, país, curso
    de interés.
-3. **Confirmación de envío** — la pantalla de agradecimiento que Monday muestra nativamente al
+5. **Confirmación de envío** — la pantalla de agradecimiento que Monday muestra nativamente al
    completar su formulario embebido (no se construye una pantalla de confirmación aparte).
 
 ## Datos por pantalla
@@ -44,11 +49,15 @@ aprobación, cupón, seguimiento, recordatorios) ya funciona bien hoy en Monday 
 - Autenticación o login de cualquier tipo.
 - Base de datos o almacenamiento propio (Vercel KV u otro) — no hay datos que persistir en el
   lado de la app, todo vive en Monday.
-- Selector de curso por país con brief descargable dentro de la app — ese campo/lógica vive en
-  el propio formulario de Monday, no se construye en la app.
 - Consulta de estado de la postulación por parte del creador dentro de la app.
 - Subida o envío del contenido final (los 2 videos) dentro de la app — se sigue enviando por
   correo/WhatsApp como hoy.
+
+## Nota de contenido pendiente
+- Los PDFs de brief (Colombia y México) todavía dicen "14 días para completar el curso + 7 días
+  para enviar el contenido" en vez de "15 días en total" (la regla vigente). Se le indicó a Lina
+  el texto exacto a corregir en el documento fuente; la app ya muestra "15 días en total" de
+  forma correcta, independientemente del PDF.
 
 ## Preguntas abiertas
 - Confirmar con Lina, antes de desplegar, la URL/embed code exacto del formulario de Monday

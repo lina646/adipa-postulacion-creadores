@@ -7,6 +7,7 @@ import {
   ArrowDown,
 } from "@phosphor-icons/react/dist/ssr";
 import { Reveal } from "@/components/Reveal";
+import { CountryBriefPicker } from "@/components/CountryBriefPicker";
 
 export default function Home() {
   return (
@@ -91,47 +92,83 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contenido esperado vs no incluir */}
+      {/* Videos de ejemplo */}
       <section className="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
         <Reveal>
-          <h2 className="text-2xl font-bold text-brand-navy">Tipo de contenido esperado</h2>
+          <h2 className="text-center text-2xl font-bold text-brand-navy">
+            Así se ve un video de ejemplo
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-center text-[15px] text-brand-navy/80">
+            Contenido real, grabado con el celular, tal como lo pedimos: cercano y auténtico.
+          </p>
         </Reveal>
-        <div className="mt-6 grid gap-6 sm:grid-cols-2">
+        <div className="mt-8 grid gap-6 sm:grid-cols-2">
           <Reveal>
-            <div className="adipa-card adipa-card-interactive h-full p-6 transition-transform hover:-translate-y-1">
-              <div className="flex items-center gap-2 text-brand-navy">
-                <CheckCircle size={22} weight="fill" className="text-brand-cyan" />
-                <h3 className="text-base font-semibold">Sí incluye</h3>
-              </div>
-              <ul className="mt-3 space-y-2 text-[15px] text-brand-navy/80">
-                <li>&ldquo;Tomé este curso sobre…&rdquo;</li>
-                <li>&ldquo;Lo que más me gustó de ADIPA fue…&rdquo;</li>
-                <li>&ldquo;Esto fue lo que me llevé de este curso/seminario&rdquo;</li>
-              </ul>
-            </div>
+            <video
+              className="mx-auto aspect-[9/16] w-full max-w-xs rounded-adipa bg-black shadow-lg"
+              controls
+              preload="metadata"
+              poster="/videos/ejemplo-1-poster.jpg"
+            >
+              <source src="/videos/ejemplo-1.mp4" type="video/mp4" />
+            </video>
           </Reveal>
           <Reveal delay={120}>
-            <div className="adipa-card adipa-card-interactive h-full p-6 transition-transform hover:-translate-y-1">
-              <div className="flex items-center gap-2 text-brand-navy">
-                <XCircle size={22} weight="fill" className="text-brand-navy/60" />
-                <h3 className="text-base font-semibold">No debe incluir</h3>
-              </div>
-              <ul className="mt-3 space-y-2 text-[15px] text-brand-navy/80">
-                <li>Lenguaje comercial o de venta.</li>
-                <li>Promesas de resultados clínicos.</li>
-                <li>Mención de precios o descuentos.</li>
-                <li>Guiones rígidos o frases obligatorias.</li>
-              </ul>
-            </div>
+            <video
+              className="mx-auto aspect-[9/16] w-full max-w-xs rounded-adipa bg-black shadow-lg"
+              controls
+              preload="metadata"
+              poster="/videos/ejemplo-2-poster.jpg"
+            >
+              <source src="/videos/ejemplo-2.mp4" type="video/mp4" />
+            </video>
           </Reveal>
         </div>
       </section>
 
-      {/* Plazos */}
+      {/* Contenido esperado vs no incluir */}
       <section className="bg-brand-soft py-14">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <div className="adipa-card flex items-start gap-4 p-6">
+            <h2 className="text-2xl font-bold text-brand-navy">Tipo de contenido esperado</h2>
+          </Reveal>
+          <div className="mt-6 grid gap-6 sm:grid-cols-2">
+            <Reveal>
+              <div className="adipa-card adipa-card-interactive h-full p-6 transition-transform hover:-translate-y-1">
+                <div className="flex items-center gap-2 text-brand-navy">
+                  <CheckCircle size={22} weight="fill" className="text-brand-cyan" />
+                  <h3 className="text-base font-semibold">Sí incluye</h3>
+                </div>
+                <ul className="mt-3 space-y-2 text-[15px] text-brand-navy/80">
+                  <li>&ldquo;Tomé este curso sobre…&rdquo;</li>
+                  <li>&ldquo;Lo que más me gustó de ADIPA fue…&rdquo;</li>
+                  <li>&ldquo;Esto fue lo que me llevé de este curso/seminario&rdquo;</li>
+                </ul>
+              </div>
+            </Reveal>
+            <Reveal delay={120}>
+              <div className="adipa-card adipa-card-interactive h-full p-6 transition-transform hover:-translate-y-1">
+                <div className="flex items-center gap-2 text-brand-navy">
+                  <XCircle size={22} weight="fill" className="text-brand-navy/60" />
+                  <h3 className="text-base font-semibold">No debe incluir</h3>
+                </div>
+                <ul className="mt-3 space-y-2 text-[15px] text-brand-navy/80">
+                  <li>Lenguaje comercial o de venta.</li>
+                  <li>Promesas de resultados clínicos.</li>
+                  <li>Mención de precios o descuentos.</li>
+                  <li>Guiones rígidos o frases obligatorias.</li>
+                </ul>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Plazos + brief por país */}
+      <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="grid gap-6 sm:grid-cols-2">
+          <Reveal>
+            <div className="adipa-card flex h-full items-start gap-4 p-6">
               <Clock size={28} className="mt-1 shrink-0 text-brand-purple" />
               <div>
                 <h3 className="text-lg font-semibold text-brand-navy">Plazos</h3>
@@ -142,28 +179,33 @@ export default function Home() {
               </div>
             </div>
           </Reveal>
+          <Reveal delay={120}>
+            <CountryBriefPicker />
+          </Reveal>
         </div>
       </section>
 
       {/* Postulación (Monday embed) */}
-      <section id="postulacion" className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-        <Reveal>
-          <h2 className="text-center text-2xl font-bold text-brand-navy">Postúlate aquí</h2>
-          <p className="mx-auto mt-3 max-w-xl text-center text-[15px] text-brand-navy/80">
-            Completa el formulario y nuestro equipo de Comunicaciones revisará tu postulación.
-          </p>
-        </Reveal>
-        <Reveal delay={150}>
-          <div className="mt-8 flex justify-center">
-            <iframe
-              src="https://forms.monday.com/forms/embed/b98d918383c4bdde9cfaad7d1de693ce?r=use1"
-              width="650"
-              height="500"
-              style={{ border: 0, boxShadow: "5px 5px 56px 0px rgba(0,0,0,0.25)" }}
-              className="w-full max-w-[650px] rounded-adipa"
-            />
-          </div>
-        </Reveal>
+      <section id="postulacion" className="bg-brand-soft py-16">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 className="text-center text-2xl font-bold text-brand-navy">Postúlate aquí</h2>
+            <p className="mx-auto mt-3 max-w-xl text-center text-[15px] text-brand-navy/80">
+              Completa el formulario y nuestro equipo de Comunicaciones revisará tu postulación.
+            </p>
+          </Reveal>
+          <Reveal delay={150}>
+            <div className="mt-8 flex justify-center">
+              <iframe
+                src="https://forms.monday.com/forms/embed/b98d918383c4bdde9cfaad7d1de693ce?r=use1"
+                width="650"
+                height="500"
+                style={{ border: 0, boxShadow: "5px 5px 56px 0px rgba(0,0,0,0.25)" }}
+                className="w-full max-w-[650px] rounded-adipa"
+              />
+            </div>
+          </Reveal>
+        </div>
       </section>
 
       {/* Footer */}
