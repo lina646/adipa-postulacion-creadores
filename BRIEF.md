@@ -5,7 +5,8 @@ Hoy la convocatoria para creadores de contenido/UGC vive dispersa entre Instagra
 directos, sin una página con la marca de ADIPA que explique la colaboración de forma clara
 antes de postularse. Esta app resuelve solo esa primera pieza: una landing oficial que explica
 el programa y lleva directo al formulario de postulación. Todo lo demás del proceso (revisión,
-aprobación, cupón, seguimiento, recordatorios) ya funciona bien hoy en Monday y no se reconstruye.
+aprobación, cupón, seguimiento, recordatorios) funciona desde Monday y la idea es avanzar en una 
+segunda etapa para automatizar otras acciones.
 
 ## Usuario principal y roles
 - **Usuario principal:** la persona creadora (estudiante o profesional de psicología o carrera
