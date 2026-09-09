@@ -60,8 +60,8 @@ aprobación, cupón, seguimiento, recordatorios) ya funciona bien hoy en Monday 
   forma correcta, independientemente del PDF.
 
 ## Preguntas abiertas
-- Confirmar con Lina, antes de desplegar, la URL/embed code exacto del formulario de Monday
-  (se obtiene desde "Compartir formulario" → "Embed" en Monday).
+Ninguna: la URL/embed del formulario de Monday se confirmó con Lina y ya está integrada y
+funcionando en la app desplegada.
 
 ## Retrospectiva
 
