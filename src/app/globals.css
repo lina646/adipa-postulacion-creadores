@@ -56,6 +56,32 @@ html {
   animation-duration: 13s;
 }
 
+@keyframes adipa-avatar-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.adipa-avatar-float {
+  animation: adipa-avatar-float 5s ease-in-out infinite;
+}
+
+@keyframes adipa-wave {
+  0%, 100% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60%, 100% { transform: rotate(0deg); }
+}
+
+.adipa-wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: adipa-wave 2.4s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
 @keyframes adipa-pulse-arrow {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(4px); }
@@ -85,6 +111,13 @@ html {
 
 @media (prefers-reduced-motion: reduce) {
   .adipa-marquee-track {
+    animation: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .adipa-avatar-float,
+  .adipa-wave {
     animation: none;
   }
 }

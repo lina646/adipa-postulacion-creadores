@@ -63,7 +63,7 @@ export default function Home() {
             </Reveal>
           </div>
           <Reveal delay={150}>
-            <div className="relative mx-auto flex h-56 w-56 items-center justify-center sm:h-72 sm:w-72">
+            <div className="adipa-avatar-float relative mx-auto flex h-56 w-56 items-center justify-center sm:h-72 sm:w-72">
               <div className="absolute inset-0 rounded-full bg-white/10 blur-2xl" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -71,6 +71,9 @@ export default function Home() {
                 alt="Creadora de contenido ADIPA"
                 className="relative h-full w-full rounded-full object-cover ring-4 ring-white/40 shadow-2xl"
               />
+              <span className="adipa-wave absolute -right-1 bottom-6 text-4xl sm:bottom-8 sm:text-5xl" aria-hidden="true">
+                👋
+              </span>
             </div>
           </Reveal>
         </div>
@@ -78,19 +81,19 @@ export default function Home() {
       </section>
 
       {/* De qué se trata */}
-      <section className="relative mx-auto max-w-3xl overflow-hidden px-4 py-14 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-14">
         <div className="pointer-events-none absolute -left-24 top-0 h-64 w-64 rounded-full bg-brand-cyan/10 blur-3xl" />
         <div className="pointer-events-none absolute -right-16 bottom-0 h-56 w-56 rounded-full bg-brand-purple/10 blur-3xl" />
-        <Reveal>
-          <div className="relative">
+        <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
             <h2 className="text-2xl font-bold text-brand-navy">¿De qué se trata esta colaboración?</h2>
             <p className="mt-4 text-[15px] leading-relaxed text-brand-navy/80">
               En ADIPA buscamos estudiantes y profesionales de psicología o carreras afines que
               quieran compartir su experiencia real con nuestros cursos a través de videos cortos,
               creativos y auténticos. 🎥✨
             </p>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
       </section>
 
       {/* Qué ofrece / qué se pide */}
