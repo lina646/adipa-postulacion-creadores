@@ -130,39 +130,56 @@ export default function Home() {
       </section>
 
       {/* Videos de ejemplo */}
-      <section id="ejemplos" className="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
-        <Reveal>
-          <h2 className="text-center text-2xl font-bold text-brand-navy">
-            Videos de ejemplo 🚀
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl text-center text-[15px] text-brand-navy/80">
-            Contenido real, cercano y auténtico.
-          </p>
-        </Reveal>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2">
-          <Reveal>
-            <PhoneFrame>
-              <video
-                className="aspect-[9/16] w-full bg-black"
-                controls
-                preload="metadata"
-                poster="/videos/ejemplo-1-poster.jpg"
-              >
-                <source src="/videos/ejemplo-1.mp4" type="video/mp4" />
-              </video>
-            </PhoneFrame>
-          </Reveal>
-          <Reveal delay={120}>
-            <PhoneFrame>
-              <video
-                className="aspect-[9/16] w-full bg-black"
-                controls
-                preload="metadata"
-                poster="/videos/ejemplo-2-poster.jpg"
-              >
-                <source src="/videos/ejemplo-2.mp4" type="video/mp4" />
-              </video>
-            </PhoneFrame>
+      <section id="ejemplos" className="relative overflow-hidden py-14">
+        <div className="pointer-events-none absolute -right-20 top-10 h-64 w-64 rounded-full bg-brand-purple/10 blur-3xl" />
+        <div className="pointer-events-none absolute -left-16 bottom-0 h-56 w-56 rounded-full bg-brand-cyan/10 blur-3xl" />
+        <div className="relative mx-auto grid max-w-5xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14 lg:px-8">
+          <div>
+            <Reveal>
+              <h2 className="text-center text-2xl font-bold text-brand-navy lg:text-left">
+                Videos de ejemplo 🚀
+              </h2>
+              <p className="mx-auto mt-3 max-w-xl text-center text-[15px] text-brand-navy/80 lg:mx-0 lg:text-left">
+                Contenido real, cercano y auténtico.
+              </p>
+            </Reveal>
+            <div className="mt-8 grid grid-cols-2 gap-5">
+              <Reveal>
+                <PhoneFrame>
+                  <video
+                    className="aspect-[9/16] w-full bg-black"
+                    controls
+                    preload="metadata"
+                    poster="/videos/ejemplo-1-poster.jpg"
+                  >
+                    <source src="/videos/ejemplo-1.mp4" type="video/mp4" />
+                  </video>
+                </PhoneFrame>
+              </Reveal>
+              <Reveal delay={120}>
+                <PhoneFrame>
+                  <video
+                    className="aspect-[9/16] w-full bg-black"
+                    controls
+                    preload="metadata"
+                    poster="/videos/ejemplo-2-poster.jpg"
+                  >
+                    <source src="/videos/ejemplo-2.mp4" type="video/mp4" />
+                  </video>
+                </PhoneFrame>
+              </Reveal>
+            </div>
+          </div>
+          <Reveal delay={150}>
+            <div className="adipa-avatar-float relative mx-auto max-w-[300px]">
+              <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brand-cyan/20 to-brand-purple/20 blur-2xl" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/creadora-selfie.jpg"
+                alt="Creadora de contenido grabándose para ADIPA"
+                className="relative w-full rounded-[2rem] object-cover shadow-2xl ring-4 ring-white/60"
+              />
+            </div>
           </Reveal>
         </div>
       </section>
