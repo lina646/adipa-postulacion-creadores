@@ -65,15 +65,16 @@ export default function Home() {
           <Reveal delay={150}>
             <div className="adipa-avatar-float relative mx-auto flex h-56 w-56 items-center justify-center sm:h-72 sm:w-72">
               <div className="absolute inset-0 rounded-full bg-white/10 blur-2xl" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/avatar-creadora.png"
-                alt="Creadora de contenido ADIPA"
+              <video
+                src="/avatar-creadora.mp4"
+                poster="/avatar-creadora-poster.jpg"
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-label="Creadora de contenido saludando"
                 className="relative h-full w-full rounded-full object-cover ring-4 ring-white/40 shadow-2xl"
               />
-              <span className="adipa-wave absolute -right-1 bottom-6 text-4xl sm:bottom-8 sm:text-5xl" aria-hidden="true">
-                👋
-              </span>
             </div>
           </Reveal>
         </div>
