@@ -65,20 +65,37 @@ export default function Home() {
       </section>
 
       {/* De qué se trata */}
-      <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:px-8">
-        <Reveal>
-          <h2 className="text-2xl font-bold text-brand-navy">¿De qué se trata esta colaboración?</h2>
-          <p className="mt-4 text-[15px] leading-relaxed text-brand-navy/80">
-            En ADIPA buscamos estudiantes y profesionales de psicología o carreras afines que
-            quieran compartir su experiencia real con nuestros cursos a través de videos cortos,
-            creativos y auténticos. 🎥✨
-          </p>
-        </Reveal>
+      <section className="relative mx-auto max-w-4xl overflow-hidden px-4 py-14 sm:px-6 lg:px-8">
+        <div className="pointer-events-none absolute -left-24 top-0 h-64 w-64 rounded-full bg-brand-cyan/10 blur-3xl" />
+        <div className="pointer-events-none absolute -right-16 bottom-0 h-56 w-56 rounded-full bg-brand-purple/10 blur-3xl" />
+        <div className="relative grid items-center gap-8 sm:grid-cols-[1fr_auto]">
+          <Reveal>
+            <div className="mx-auto max-w-2xl text-center sm:mx-0 sm:text-left">
+              <h2 className="text-2xl font-bold text-brand-navy">¿De qué se trata esta colaboración?</h2>
+              <p className="mt-4 text-[15px] leading-relaxed text-brand-navy/80">
+                En ADIPA buscamos estudiantes y profesionales de psicología o carreras afines que
+                quieran compartir su experiencia real con nuestros cursos a través de videos cortos,
+                creativos y auténticos. 🎥✨
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={120}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/avatar-creadora.png"
+              alt=""
+              aria-hidden="true"
+              className="mx-auto hidden h-40 w-40 rounded-full object-cover ring-4 ring-white shadow-lg sm:block"
+            />
+          </Reveal>
+        </div>
       </section>
 
       {/* Qué ofrece / qué se pide */}
-      <section className="bg-brand-soft py-14">
-        <div className="mx-auto grid max-w-4xl gap-6 px-4 sm:grid-cols-2 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-brand-soft py-14">
+        <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-brand-purple/10 blur-3xl" />
+        <div className="pointer-events-none absolute -left-16 bottom-0 h-56 w-56 rounded-full bg-brand-cyan/15 blur-3xl" />
+        <div className="relative mx-auto grid max-w-4xl gap-6 px-4 sm:grid-cols-2 sm:px-6 lg:px-8">
           <Reveal>
             <div className="adipa-card adipa-card-interactive h-full p-6 transition-transform hover:-translate-y-1">
               <Gift size={28} className="text-brand-purple" />
@@ -151,21 +168,17 @@ export default function Home() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <h2 className="text-center text-2xl font-bold text-brand-navy">Tipo de contenido esperado</h2>
-            <p className="mx-auto mt-3 max-w-xl text-center text-[15px] text-brand-navy/80">
-              Así puedes armar tu video: cómo arrancarlo y qué evitar.
-            </p>
           </Reveal>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
             <Reveal>
-              <div className="adipa-card adipa-card-interactive h-full overflow-hidden p-6 transition-transform hover:-translate-y-1">
-                <div className="-mx-6 -mt-6 mb-5 h-1.5 bg-gradient-to-r from-brand-cyan to-brand-purple" />
+              <div className="h-full rounded-adipa bg-gradient-to-br from-brand-cyan to-brand-purple p-6 text-white shadow-lg transition-transform hover:-translate-y-1">
                 <div className="flex items-center gap-3">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-cyan/15 text-xl">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/20 text-xl">
                     🎬
                   </span>
-                  <h3 className="text-base font-semibold text-brand-navy">Cómo iniciar tu video</h3>
+                  <h3 className="text-base font-semibold">Cómo iniciar tu video</h3>
                 </div>
-                <ul className="mt-4 space-y-3 text-[15px] text-brand-navy/80">
+                <ul className="mt-4 space-y-3 text-[15px] text-white/90">
                   <li className="flex items-start gap-2">
                     <span aria-hidden="true">✅</span>
                     <span>&ldquo;Tomé este curso sobre…&rdquo;</span>
@@ -182,15 +195,14 @@ export default function Home() {
               </div>
             </Reveal>
             <Reveal delay={120}>
-              <div className="adipa-card adipa-card-interactive h-full overflow-hidden p-6 transition-transform hover:-translate-y-1">
-                <div className="-mx-6 -mt-6 mb-5 h-1.5 bg-brand-navy/25" />
+              <div className="h-full rounded-adipa bg-brand-navy p-6 text-white shadow-lg transition-transform hover:-translate-y-1">
                 <div className="flex items-center gap-3">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-navy/10 text-xl">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-xl">
                     🚫
                   </span>
-                  <h3 className="text-base font-semibold text-brand-navy">Lo que no debe incluir tu video</h3>
+                  <h3 className="text-base font-semibold">Lo que no debe incluir tu video</h3>
                 </div>
-                <ul className="mt-4 space-y-3 text-[15px] text-brand-navy/80">
+                <ul className="mt-4 space-y-3 text-[15px] text-white/80">
                   <li className="flex items-start gap-2">
                     <span aria-hidden="true">❌</span>
                     <span>Promesas de resultados clínicos.</span>
@@ -214,11 +226,14 @@ export default function Home() {
       <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid items-start gap-6 sm:grid-cols-2">
           <Reveal>
-            <div className="adipa-card flex items-start gap-4 p-6">
-              <Clock size={28} className="mt-1 shrink-0 text-brand-purple" />
-              <div>
-                <h3 className="text-lg font-semibold text-brand-navy">Plazos</h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-brand-navy/80">
+            <div className="relative flex h-full items-start gap-4 overflow-hidden rounded-adipa bg-gradient-to-br from-brand-purple to-brand-cyan p-6 text-white shadow-lg">
+              <div className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-white/10" />
+              <span className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/20">
+                <Clock size={22} weight="bold" />
+              </span>
+              <div className="relative">
+                <h3 className="text-lg font-semibold">Plazos</h3>
+                <p className="mt-2 text-[15px] leading-relaxed text-white/90">
                   Una vez activado tu cupón, tienes <strong>15 días en total</strong> para
                   completar el curso y enviarnos tus 2 videos.
                 </p>
