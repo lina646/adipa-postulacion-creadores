@@ -12,6 +12,7 @@ import {
 import { Reveal } from "@/components/Reveal";
 import { CountryBriefPicker } from "@/components/CountryBriefPicker";
 import { HeroWave } from "@/components/HeroWave";
+import { WaveDivider } from "@/components/WaveDivider";
 import { Testimonials } from "@/components/Testimonials";
 import { PhoneFrame } from "@/components/PhoneFrame";
 
@@ -130,14 +131,15 @@ export default function Home() {
       </section>
 
       {/* Videos de ejemplo */}
-      <section id="ejemplos" className="relative overflow-hidden bg-brand-purple py-16 text-white">
+      <section id="ejemplos" className="relative overflow-hidden bg-gradient-to-br from-brand-purple to-brand-cyan py-20 text-white sm:py-28">
+        <WaveDivider fill="#F3F4FF" flip />
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute -right-24 -top-32 select-none text-[26rem] font-black leading-none text-white/5"
+          className="pointer-events-none absolute -right-24 -top-32 select-none text-[26rem] font-black leading-none text-white/10"
         >
           A
         </span>
-        <div className="pointer-events-none absolute -left-20 bottom-0 h-64 w-64 rounded-full bg-brand-cyan/20 blur-3xl" />
+        <div className="pointer-events-none absolute -left-20 bottom-10 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
         <div className="relative mx-auto grid max-w-5xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14 lg:px-8">
           <div>
             <Reveal>
@@ -187,6 +189,7 @@ export default function Home() {
             </div>
           </Reveal>
         </div>
+        <WaveDivider fill="#F3F4FF" />
       </section>
 
       <Testimonials />
