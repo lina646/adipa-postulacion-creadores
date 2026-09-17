@@ -13,6 +13,7 @@ import { Reveal } from "@/components/Reveal";
 import { CountryBriefPicker } from "@/components/CountryBriefPicker";
 import { HeroWave } from "@/components/HeroWave";
 import { Testimonials } from "@/components/Testimonials";
+import { PhoneFrame } from "@/components/PhoneFrame";
 
 export default function Home() {
   return (
@@ -47,12 +48,6 @@ export default function Home() {
               >
                 Quiero postularme
                 <ArrowDown size={18} weight="bold" className="adipa-cta-arrow" />
-              </a>
-              <a
-                href="#ejemplos"
-                className="inline-flex items-center gap-2 rounded-adipa border border-white/60 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
-              >
-                Ver videos de ejemplo
               </a>
               <a
                 href="/briefs/adipa-brief-colombia.pdf"
@@ -123,24 +118,28 @@ export default function Home() {
         </Reveal>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           <Reveal>
-            <video
-              className="mx-auto aspect-[9/16] w-full max-w-xs rounded-adipa bg-black shadow-lg"
-              controls
-              preload="metadata"
-              poster="/videos/ejemplo-1-poster.jpg"
-            >
-              <source src="/videos/ejemplo-1.mp4" type="video/mp4" />
-            </video>
+            <PhoneFrame>
+              <video
+                className="aspect-[9/16] w-full bg-black"
+                controls
+                preload="metadata"
+                poster="/videos/ejemplo-1-poster.jpg"
+              >
+                <source src="/videos/ejemplo-1.mp4" type="video/mp4" />
+              </video>
+            </PhoneFrame>
           </Reveal>
           <Reveal delay={120}>
-            <video
-              className="mx-auto aspect-[9/16] w-full max-w-xs rounded-adipa bg-black shadow-lg"
-              controls
-              preload="metadata"
-              poster="/videos/ejemplo-2-poster.jpg"
-            >
-              <source src="/videos/ejemplo-2.mp4" type="video/mp4" />
-            </video>
+            <PhoneFrame>
+              <video
+                className="aspect-[9/16] w-full bg-black"
+                controls
+                preload="metadata"
+                poster="/videos/ejemplo-2-poster.jpg"
+              >
+                <source src="/videos/ejemplo-2.mp4" type="video/mp4" />
+              </video>
+            </PhoneFrame>
           </Reveal>
         </div>
       </section>
@@ -257,48 +256,52 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-[#e3e8f3] py-8">
-        <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 px-4 text-center sm:px-6 lg:px-8">
-          <div className="flex items-center gap-5">
-            <a
-              href="https://www.tiktok.com/@somosadipa"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="TikTok de ADIPA"
-              className="text-brand-navy/60 transition hover:text-brand-purple"
-            >
-              <TiktokLogo size={22} weight="fill" />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/academia-digital-de-psicologia-y-aprendizaje-adipa/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn de ADIPA"
-              className="text-brand-navy/60 transition hover:text-brand-purple"
-            >
-              <LinkedinLogo size={22} weight="fill" />
-            </a>
-            <a
-              href="https://www.youtube.com/@somosadipa"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube de ADIPA"
-              className="text-brand-navy/60 transition hover:text-brand-purple"
-            >
-              <YoutubeLogo size={22} weight="fill" />
-            </a>
-            <a
-              href="https://open.spotify.com/show/4mwZlXLYaGdr9WIqiuSHup"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Spotify de ADIPA"
-              className="text-brand-navy/60 transition hover:text-brand-purple"
-            >
-              <SpotifyLogo size={22} weight="fill" />
-            </a>
+        <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/adipa-logo.png" alt="ADIPA" className="h-6 w-auto sm:h-7" />
+          <div className="flex flex-col items-center gap-4 sm:items-end">
+            <div className="flex items-center gap-5">
+              <a
+                href="https://www.tiktok.com/@somosadipa"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok de ADIPA"
+                className="text-brand-navy/60 transition hover:text-brand-purple"
+              >
+                <TiktokLogo size={22} weight="fill" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/academia-digital-de-psicologia-y-aprendizaje-adipa/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn de ADIPA"
+                className="text-brand-navy/60 transition hover:text-brand-purple"
+              >
+                <LinkedinLogo size={22} weight="fill" />
+              </a>
+              <a
+                href="https://www.youtube.com/@somosadipa"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube de ADIPA"
+                className="text-brand-navy/60 transition hover:text-brand-purple"
+              >
+                <YoutubeLogo size={22} weight="fill" />
+              </a>
+              <a
+                href="https://open.spotify.com/show/4mwZlXLYaGdr9WIqiuSHup"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Spotify de ADIPA"
+                className="text-brand-navy/60 transition hover:text-brand-purple"
+              >
+                <SpotifyLogo size={22} weight="fill" />
+              </a>
+            </div>
+            <p className="text-sm text-brand-navy/70">
+              ¿Dudas? Escríbenos a <a className="underline" href="mailto:Lina@adipa.co">Lina@adipa.co</a>
+            </p>
           </div>
-          <p className="text-sm text-brand-navy/70">
-            ¿Dudas? Escríbenos a <a className="underline" href="mailto:Lina@adipa.co">Lina@adipa.co</a>
-          </p>
         </div>
       </footer>
     </main>
