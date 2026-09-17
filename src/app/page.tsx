@@ -1,6 +1,4 @@
 import {
-  CheckCircle,
-  XCircle,
   Clock,
   VideoCamera,
   Gift,
@@ -153,33 +151,59 @@ export default function Home() {
       <section className="py-14">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <h2 className="text-2xl font-bold text-brand-navy">Tipo de contenido esperado</h2>
+            <h2 className="text-center text-2xl font-bold text-brand-navy">Tipo de contenido esperado</h2>
+            <p className="mx-auto mt-3 max-w-xl text-center text-[15px] text-brand-navy/80">
+              Así puedes armar tu video: cómo arrancarlo y qué evitar.
+            </p>
           </Reveal>
-          <div className="mt-6 grid gap-6 sm:grid-cols-2">
+          <div className="mt-8 grid gap-6 sm:grid-cols-2">
             <Reveal>
-              <div className="adipa-card adipa-card-interactive h-full p-6 transition-transform hover:-translate-y-1">
-                <div className="flex items-center gap-2 text-brand-navy">
-                  <CheckCircle size={22} weight="fill" className="text-brand-cyan" />
-                  <h3 className="text-base font-semibold">Sí incluye</h3>
+              <div className="adipa-card adipa-card-interactive h-full overflow-hidden p-6 transition-transform hover:-translate-y-1">
+                <div className="-mx-6 -mt-6 mb-5 h-1.5 bg-gradient-to-r from-brand-cyan to-brand-purple" />
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-cyan/15 text-xl">
+                    🎬
+                  </span>
+                  <h3 className="text-base font-semibold text-brand-navy">Cómo iniciar tu video</h3>
                 </div>
-                <ul className="mt-3 space-y-2 text-[15px] text-brand-navy/80">
-                  <li>&ldquo;Tomé este curso sobre…&rdquo;</li>
-                  <li>&ldquo;Lo que más me gustó de ADIPA fue…&rdquo;</li>
-                  <li>&ldquo;Esto fue lo que me llevé de este curso/seminario&rdquo;</li>
+                <ul className="mt-4 space-y-3 text-[15px] text-brand-navy/80">
+                  <li className="flex items-start gap-2">
+                    <span aria-hidden="true">✅</span>
+                    <span>&ldquo;Tomé este curso sobre…&rdquo;</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span aria-hidden="true">✅</span>
+                    <span>&ldquo;Lo que más me gustó de ADIPA fue…&rdquo;</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span aria-hidden="true">✅</span>
+                    <span>&ldquo;Esto fue lo que me llevé de este curso/seminario&rdquo;</span>
+                  </li>
                 </ul>
               </div>
             </Reveal>
             <Reveal delay={120}>
-              <div className="adipa-card adipa-card-interactive h-full p-6 transition-transform hover:-translate-y-1">
-                <div className="flex items-center gap-2 text-brand-navy">
-                  <XCircle size={22} weight="fill" className="text-brand-navy/60" />
-                  <h3 className="text-base font-semibold">No debe incluir</h3>
+              <div className="adipa-card adipa-card-interactive h-full overflow-hidden p-6 transition-transform hover:-translate-y-1">
+                <div className="-mx-6 -mt-6 mb-5 h-1.5 bg-brand-navy/25" />
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-navy/10 text-xl">
+                    🚫
+                  </span>
+                  <h3 className="text-base font-semibold text-brand-navy">Lo que no debe incluir tu video</h3>
                 </div>
-                <ul className="mt-3 space-y-2 text-[15px] text-brand-navy/80">
-                  <li>Lenguaje comercial o de venta.</li>
-                  <li>Promesas de resultados clínicos.</li>
-                  <li>Mención de precios o descuentos.</li>
-                  <li>Guiones rígidos o frases obligatorias.</li>
+                <ul className="mt-4 space-y-3 text-[15px] text-brand-navy/80">
+                  <li className="flex items-start gap-2">
+                    <span aria-hidden="true">❌</span>
+                    <span>Promesas de resultados clínicos.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span aria-hidden="true">❌</span>
+                    <span>Guiones rígidos o frases obligatorias.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span aria-hidden="true">❌</span>
+                    <span>Lenguaje violento.</span>
+                  </li>
                 </ul>
               </div>
             </Reveal>
@@ -189,9 +213,9 @@ export default function Home() {
 
       {/* Plazos + brief por país */}
       <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid items-start gap-6 sm:grid-cols-2">
           <Reveal>
-            <div className="adipa-card flex h-full items-start gap-4 p-6">
+            <div className="adipa-card flex items-start gap-4 p-6">
               <Clock size={28} className="mt-1 shrink-0 text-brand-purple" />
               <div>
                 <h3 className="text-lg font-semibold text-brand-navy">Plazos</h3>
