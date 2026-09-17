@@ -130,16 +130,21 @@ export default function Home() {
       </section>
 
       {/* Videos de ejemplo */}
-      <section id="ejemplos" className="relative overflow-hidden py-14">
-        <div className="pointer-events-none absolute -right-20 top-10 h-64 w-64 rounded-full bg-brand-purple/10 blur-3xl" />
-        <div className="pointer-events-none absolute -left-16 bottom-0 h-56 w-56 rounded-full bg-brand-cyan/10 blur-3xl" />
+      <section id="ejemplos" className="relative overflow-hidden bg-brand-purple py-16 text-white">
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute -right-24 -top-32 select-none text-[26rem] font-black leading-none text-white/5"
+        >
+          A
+        </span>
+        <div className="pointer-events-none absolute -left-20 bottom-0 h-64 w-64 rounded-full bg-brand-cyan/20 blur-3xl" />
         <div className="relative mx-auto grid max-w-5xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14 lg:px-8">
           <div>
             <Reveal>
-              <h2 className="text-center text-2xl font-bold text-brand-navy lg:text-left">
+              <h2 className="text-center text-2xl font-bold lg:text-left">
                 Videos de ejemplo 🚀
               </h2>
-              <p className="mx-auto mt-3 max-w-xl text-center text-[15px] text-brand-navy/80 lg:mx-0 lg:text-left">
+              <p className="mx-auto mt-3 max-w-xl text-center text-[15px] text-white/80 lg:mx-0 lg:text-left">
                 Contenido real, cercano y auténtico.
               </p>
             </Reveal>
@@ -171,13 +176,13 @@ export default function Home() {
             </div>
           </div>
           <Reveal delay={150}>
-            <div className="adipa-avatar-float relative mx-auto max-w-[300px]">
-              <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brand-cyan/20 to-brand-purple/20 blur-2xl" />
+            <div className="adipa-avatar-float relative mx-auto h-64 w-64 sm:h-80 sm:w-80">
+              <div className="absolute inset-0 rounded-full bg-white/15 blur-2xl" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/creadora-selfie.jpg"
                 alt="Creadora de contenido grabándose para ADIPA"
-                className="relative w-full rounded-[2rem] object-cover shadow-2xl ring-4 ring-white/60"
+                className="relative h-full w-full rounded-full object-cover shadow-2xl ring-4 ring-white/40"
               />
             </div>
           </Reveal>
@@ -270,13 +275,10 @@ export default function Home() {
       </section>
 
       {/* Postulación (Monday embed) */}
-      <section id="postulacion" className="bg-brand-soft py-16">
+      <section id="postulacion" className="bg-white py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <h2 className="text-center text-2xl font-bold text-brand-navy">Postúlate aquí</h2>
-            <p className="mx-auto mt-3 max-w-xl text-center text-[15px] text-brand-navy/80">
-              Completa el formulario y nuestro equipo de Comunicaciones revisará tu postulación.
-            </p>
           </Reveal>
           <Reveal delay={150}>
             <div className="adipa-card mt-8 flex justify-center overflow-hidden p-2 sm:p-3">
