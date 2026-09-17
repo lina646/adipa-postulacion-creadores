@@ -22,42 +22,55 @@ export default function Home() {
       <section className="relative overflow-hidden bg-gradient-to-br from-brand-purple to-brand-cyan pb-24 text-white sm:pb-32">
         <div className="adipa-hero-orb h-72 w-72 -left-16 -top-16 text-white" />
         <div className="adipa-hero-orb adipa-hero-orb-slow h-56 w-56 right-0 top-24 text-white" />
-        <div className="relative mx-auto max-w-3xl px-4 py-20 text-center sm:px-6 lg:px-8">
-          <Reveal>
-            <span className="inline-block rounded-full bg-white/12 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] ring-1 ring-white/25">
-              Programa de creadores UGC
-            </span>
-          </Reveal>
-          <Reveal delay={100}>
-            <h1 className="mt-6 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-              Comparte tu experiencia real con ADIPA
-            </h1>
-          </Reveal>
-          <Reveal delay={200}>
-            <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-white/80 sm:text-base">
-              Si eres estudiante o profesional de psicología (o carreras afines), cuéntanos tu
-              experiencia con un curso o seminario de ADIPA en un video corto y recibe acceso
-              gratuito a un curso asincrónico.
-            </p>
-          </Reveal>
-          <Reveal delay={300}>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <a
-                href="#postulacion"
-                className="inline-flex items-center gap-2 rounded-adipa bg-white px-6 py-3 text-sm font-semibold text-brand-purple transition hover:scale-[1.03] hover:bg-white/90"
-              >
-                Quiero postularme
-                <ArrowDown size={18} weight="bold" className="adipa-cta-arrow" />
-              </a>
-              <a
-                href="/briefs/adipa-brief-colombia.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-adipa border border-white/60 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
-              >
-                <DownloadSimple size={18} weight="bold" />
-                Brief
-              </a>
+        <div className="relative mx-auto grid max-w-5xl items-center gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
+          <div className="text-center lg:text-left">
+            <Reveal>
+              <span className="inline-block rounded-full bg-white/12 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] ring-1 ring-white/25">
+                Programa de creadores UGC
+              </span>
+            </Reveal>
+            <Reveal delay={100}>
+              <h1 className="mt-6 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                Comparte tu experiencia real con ADIPA
+              </h1>
+            </Reveal>
+            <Reveal delay={200}>
+              <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-white/80 sm:text-base lg:mx-0">
+                Si eres estudiante o profesional de psicología (o carreras afines), cuéntanos tu
+                experiencia con un curso o seminario de ADIPA en un video corto y recibe acceso
+                gratuito a un curso asincrónico.
+              </p>
+            </Reveal>
+            <Reveal delay={300}>
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+                <a
+                  href="#postulacion"
+                  className="inline-flex items-center gap-2 rounded-adipa bg-white px-6 py-3 text-sm font-semibold text-brand-purple transition hover:scale-[1.03] hover:bg-white/90"
+                >
+                  Quiero postularme
+                  <ArrowDown size={18} weight="bold" className="adipa-cta-arrow" />
+                </a>
+                <a
+                  href="/briefs/adipa-brief-colombia.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-adipa border border-white/60 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
+                >
+                  <DownloadSimple size={18} weight="bold" />
+                  Brief
+                </a>
+              </div>
+            </Reveal>
+          </div>
+          <Reveal delay={150}>
+            <div className="relative mx-auto flex h-56 w-56 items-center justify-center sm:h-72 sm:w-72">
+              <div className="absolute inset-0 rounded-full bg-white/10 blur-2xl" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/avatar-creadora.png"
+                alt="Creadora de contenido ADIPA"
+                className="relative h-full w-full rounded-full object-cover ring-4 ring-white/40 shadow-2xl"
+              />
             </div>
           </Reveal>
         </div>
@@ -65,30 +78,19 @@ export default function Home() {
       </section>
 
       {/* De qué se trata */}
-      <section className="relative mx-auto max-w-4xl overflow-hidden px-4 py-14 sm:px-6 lg:px-8">
+      <section className="relative mx-auto max-w-3xl overflow-hidden px-4 py-14 sm:px-6 lg:px-8">
         <div className="pointer-events-none absolute -left-24 top-0 h-64 w-64 rounded-full bg-brand-cyan/10 blur-3xl" />
         <div className="pointer-events-none absolute -right-16 bottom-0 h-56 w-56 rounded-full bg-brand-purple/10 blur-3xl" />
-        <div className="relative grid items-center gap-8 sm:grid-cols-[1fr_auto]">
-          <Reveal>
-            <div className="mx-auto max-w-2xl text-center sm:mx-0 sm:text-left">
-              <h2 className="text-2xl font-bold text-brand-navy">¿De qué se trata esta colaboración?</h2>
-              <p className="mt-4 text-[15px] leading-relaxed text-brand-navy/80">
-                En ADIPA buscamos estudiantes y profesionales de psicología o carreras afines que
-                quieran compartir su experiencia real con nuestros cursos a través de videos cortos,
-                creativos y auténticos. 🎥✨
-              </p>
-            </div>
-          </Reveal>
-          <Reveal delay={120}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/avatar-creadora.png"
-              alt=""
-              aria-hidden="true"
-              className="mx-auto hidden h-40 w-40 rounded-full object-cover ring-4 ring-white shadow-lg sm:block"
-            />
-          </Reveal>
-        </div>
+        <Reveal>
+          <div className="relative">
+            <h2 className="text-2xl font-bold text-brand-navy">¿De qué se trata esta colaboración?</h2>
+            <p className="mt-4 text-[15px] leading-relaxed text-brand-navy/80">
+              En ADIPA buscamos estudiantes y profesionales de psicología o carreras afines que
+              quieran compartir su experiencia real con nuestros cursos a través de videos cortos,
+              creativos y auténticos. 🎥✨
+            </p>
+          </div>
+        </Reveal>
       </section>
 
       {/* Qué ofrece / qué se pide */}
@@ -223,8 +225,8 @@ export default function Home() {
       </section>
 
       {/* Plazos + brief por país */}
-      <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="grid items-start gap-6 sm:grid-cols-2">
+      <section className="bg-brand-soft py-14">
+        <div className="mx-auto grid max-w-3xl items-start gap-6 px-4 sm:grid-cols-2 sm:px-6 lg:px-8">
           <Reveal>
             <div className="relative flex h-full items-start gap-4 overflow-hidden rounded-adipa bg-gradient-to-br from-brand-purple to-brand-cyan p-6 text-white shadow-lg">
               <div className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-white/10" />

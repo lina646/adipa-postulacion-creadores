@@ -29,9 +29,9 @@ export function CountryBriefPicker() {
 
   return (
     <div>
-      <div className="adipa-card p-6">
-        <h3 className="text-lg font-semibold text-brand-navy">Elige tu país</h3>
-        <p className="mt-2 text-[15px] text-brand-navy/80">
+      <div className="rounded-adipa bg-brand-navy p-6 text-white shadow-lg">
+        <h3 className="text-lg font-semibold">Elige tu país</h3>
+        <p className="mt-2 text-[15px] text-white/80">
           Consulta los cursos asincrónicos disponibles en tu país. El brief con el detalle de tu
           colaboración lo encuentras arriba.
         </p>
@@ -48,8 +48,8 @@ export function CountryBriefPicker() {
               title={COUNTRIES[key].label}
               className={`flex h-12 w-12 items-center justify-center rounded-full text-2xl transition ${
                 country === key
-                  ? "bg-brand-soft ring-2 ring-brand-purple ring-offset-2"
-                  : "opacity-50 hover:opacity-100"
+                  ? "bg-white ring-2 ring-brand-purple ring-offset-2"
+                  : "bg-white/70 opacity-60 hover:opacity-100"
               }`}
             >
               {COUNTRIES[key].flag}
