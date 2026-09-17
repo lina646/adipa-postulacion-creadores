@@ -5,6 +5,11 @@ import {
   VideoCamera,
   Gift,
   ArrowDown,
+  DownloadSimple,
+  TiktokLogo,
+  LinkedinLogo,
+  YoutubeLogo,
+  SpotifyLogo,
 } from "@phosphor-icons/react/dist/ssr";
 import { Reveal } from "@/components/Reveal";
 import { CountryBriefPicker } from "@/components/CountryBriefPicker";
@@ -50,6 +55,15 @@ export default function Home() {
                 className="inline-flex items-center gap-2 rounded-adipa border border-white/60 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
               >
                 Ver videos de ejemplo
+              </a>
+              <a
+                href="/briefs/adipa-brief-colombia.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-adipa border border-white/60 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
+              >
+                <DownloadSimple size={18} weight="bold" />
+                Brief
               </a>
             </div>
           </Reveal>
@@ -219,8 +233,48 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-[#e3e8f3] py-8">
-        <div className="mx-auto max-w-3xl px-4 text-center text-sm text-brand-navy/70 sm:px-6 lg:px-8">
-          <p>¿Dudas? Escríbenos a <a className="underline" href="mailto:Lina@adipa.co">Lina@adipa.co</a></p>
+        <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 px-4 text-center sm:px-6 lg:px-8">
+          <div className="flex items-center gap-5">
+            <a
+              href="https://www.tiktok.com/@somosadipa"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok de ADIPA"
+              className="text-brand-navy/60 transition hover:text-brand-purple"
+            >
+              <TiktokLogo size={22} weight="fill" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/academia-digital-de-psicologia-y-aprendizaje-adipa/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn de ADIPA"
+              className="text-brand-navy/60 transition hover:text-brand-purple"
+            >
+              <LinkedinLogo size={22} weight="fill" />
+            </a>
+            <a
+              href="https://www.youtube.com/@somosadipa"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube de ADIPA"
+              className="text-brand-navy/60 transition hover:text-brand-purple"
+            >
+              <YoutubeLogo size={22} weight="fill" />
+            </a>
+            <a
+              href="https://open.spotify.com/show/4mwZlXLYaGdr9WIqiuSHup"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Spotify de ADIPA"
+              className="text-brand-navy/60 transition hover:text-brand-purple"
+            >
+              <SpotifyLogo size={22} weight="fill" />
+            </a>
+          </div>
+          <p className="text-sm text-brand-navy/70">
+            ¿Dudas? Escríbenos a <a className="underline" href="mailto:Lina@adipa.co">Lina@adipa.co</a>
+          </p>
         </div>
       </footer>
     </main>

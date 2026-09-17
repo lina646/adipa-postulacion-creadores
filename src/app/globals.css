@@ -64,3 +64,27 @@ html {
 .adipa-cta-arrow {
   animation: adipa-pulse-arrow 1.6s ease-in-out infinite;
 }
+
+.adipa-marquee-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+
+@keyframes adipa-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.adipa-marquee-track {
+  animation: adipa-marquee 32s linear infinite;
+}
+
+.adipa-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .adipa-marquee-track {
+    animation: none;
+  }
+}
