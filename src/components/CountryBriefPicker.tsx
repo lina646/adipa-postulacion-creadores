@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowSquareOut } from "@phosphor-icons/react";
+import { ArrowSquareOut, Globe } from "@phosphor-icons/react";
 
 type Country = "colombia" | "mexico" | "argentina";
 
@@ -28,15 +28,20 @@ export function CountryBriefPicker() {
   const current = COUNTRIES[country];
 
   return (
-    <div>
-      <div className="rounded-adipa bg-brand-navy p-6 text-white shadow-lg">
-        <h3 className="text-lg font-semibold">Elige tu país</h3>
-        <p className="mt-2 text-[15px] text-white/80">
-          Consulta los cursos asincrónicos disponibles en tu país. El brief con el detalle de tu
-          colaboración lo encuentras arriba.
-        </p>
+    <div className="relative flex h-full flex-col overflow-hidden rounded-adipa bg-brand-lavender p-6 text-brand-navy shadow-lg">
+      <div className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-white/40" />
+      <div className="relative flex items-start gap-4">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/60">
+          <Globe size={22} weight="bold" className="text-brand-purple" />
+        </span>
+        <div>
+          <h3 className="text-lg font-semibold">Elige tu país</h3>
+          <p className="mt-2 text-[15px] leading-relaxed text-brand-navy/80">
+            Consulta los cursos asincrónicos disponibles en tu país.
+          </p>
+        </div>
       </div>
-      <div className="mt-4 flex flex-col items-center gap-3">
+      <div className="relative mt-5 flex flex-1 flex-col items-center justify-end gap-3">
         <div className="flex gap-3">
           {(Object.keys(COUNTRIES) as Country[]).map((key) => (
             <button

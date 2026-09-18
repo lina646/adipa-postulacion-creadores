@@ -133,12 +133,6 @@ export default function Home() {
       {/* Videos de ejemplo */}
       <section id="ejemplos" className="relative overflow-hidden bg-gradient-to-br from-brand-purple to-brand-cyan py-20 text-white sm:py-28">
         <WaveDivider fill="#F3F4FF" flip />
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute -right-24 -top-32 select-none text-[26rem] font-black leading-none text-white/10"
-        >
-          A
-        </span>
         <div className="pointer-events-none absolute -left-20 bottom-10 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
         <div className="relative mx-auto grid max-w-5xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14 lg:px-8">
           <div>
@@ -198,7 +192,7 @@ export default function Home() {
       <section className="py-14">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <h2 className="text-center text-2xl font-bold text-brand-navy">Tipo de contenido esperado</h2>
+            <h2 className="text-center text-2xl font-bold text-brand-navy">Recomendaciones</h2>
           </Reveal>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
             <Reveal>
@@ -255,25 +249,30 @@ export default function Home() {
 
       {/* Plazos + brief por país */}
       <section className="bg-brand-soft py-14">
-        <div className="mx-auto grid max-w-3xl items-start gap-6 px-4 sm:grid-cols-2 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <div className="relative flex h-full items-start gap-4 overflow-hidden rounded-adipa bg-gradient-to-br from-brand-purple to-brand-cyan p-6 text-white shadow-lg">
-              <div className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-white/10" />
-              <span className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/20">
-                <Clock size={22} weight="bold" />
-              </span>
-              <div className="relative">
-                <h3 className="text-lg font-semibold">Plazos</h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-white/90">
-                  Una vez activado tu cupón, tienes <strong>15 días en total</strong> para
-                  completar el curso y enviarnos tus 2 videos.
-                </p>
+            <h2 className="text-center text-2xl font-bold text-brand-navy">Plazos y tu país</h2>
+          </Reveal>
+          <div className="mt-8 grid items-stretch gap-6 sm:grid-cols-2">
+            <Reveal className="h-full">
+              <div className="relative flex h-full items-start gap-4 overflow-hidden rounded-adipa bg-brand-lightBlue p-6 text-brand-navy shadow-lg">
+                <div className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-white/40" />
+                <span className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/60">
+                  <Clock size={22} weight="bold" className="text-brand-purple" />
+                </span>
+                <div className="relative">
+                  <h3 className="text-lg font-semibold">Plazos</h3>
+                  <p className="mt-2 text-[15px] leading-relaxed text-brand-navy/80">
+                    Una vez activado tu cupón, tienes <strong>15 días en total</strong> para
+                    completar el curso y enviarnos tus 2 videos.
+                  </p>
+                </div>
               </div>
-            </div>
-          </Reveal>
-          <Reveal delay={120}>
-            <CountryBriefPicker />
-          </Reveal>
+            </Reveal>
+            <Reveal delay={120} className="h-full">
+              <CountryBriefPicker />
+            </Reveal>
+          </div>
         </div>
       </section>
 

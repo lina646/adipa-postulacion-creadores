@@ -13,25 +13,25 @@ const TESTIMONIALS: { name: string; country: Country; quote: string }[] = [
     name: "Camila Ríos",
     country: "Colombia",
     quote:
-      "¡Me encantó el curso de Adipa! Aprendí un montón y el contenido fue demasiado bueno y práctico. Además, me fascinó crear contenido para su comunidad. ¡100% recomendado!",
+      "Grabar mis videos fue más fácil de lo que pensé, sin guion ni presión. Y de paso me llevé un curso que sí me sirvió.",
   },
   {
     name: "Mateo Morales",
     country: "México",
     quote:
-      "¡Qué joya de curso! Estuvo demasiado bueno y aprendí muchísimo desde el día uno. Crear contenido para Adipa estuvo padrísimo, la experiencia fue increíble.",
+      "Me gustó poder contar mi experiencia con mis propias palabras. Todo el proceso fue rápido y claro.",
   },
   {
     name: "Valeria Gómez",
     country: "Colombia",
     quote:
-      "Hacer este curso con Adipa fue la mejor decisión; la calidad es brutal y aprendí un montón. Me encantó crear contenido para ellos, ¡lo disfrutarán muchísimo!",
+      "No esperaba que fuera tan sencillo: grabé mis dos videos en una tarde y ya tenía acceso al curso.",
   },
   {
     name: "Rodrigo Fernández",
     country: "México",
     quote:
-      "El curso rebasó mis expectativas, estuvo demasiado bueno y aprendí un buen de herramientas. Me fascinó colaborar creando contenido para Adipa. ¡De 10!",
+      "Fue chévere poder hablar de mi experiencia real con ADIPA, sin nada forzado ni impostado.",
   },
 ];
 
