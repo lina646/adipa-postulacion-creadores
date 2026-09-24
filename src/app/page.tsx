@@ -251,7 +251,7 @@ export default function Home() {
       <section className="bg-brand-soft py-14">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <h2 className="text-center text-2xl font-bold text-brand-navy">Plazos y tu país</h2>
+            <h2 className="text-center text-2xl font-bold text-brand-navy">Plazos y cursos</h2>
           </Reveal>
           <div className="mt-8 grid items-stretch gap-6 sm:grid-cols-2">
             <Reveal className="h-full">
