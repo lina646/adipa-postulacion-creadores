@@ -8,6 +8,10 @@ import {
   LinkedinLogo,
   YoutubeLogo,
   SpotifyLogo,
+  CheckCircle,
+  XCircle,
+  Prohibit,
+  Info,
 } from "@phosphor-icons/react/dist/ssr";
 import { Reveal } from "@/components/Reveal";
 import { CountryBriefPicker } from "@/components/CountryBriefPicker";
@@ -196,48 +200,48 @@ export default function Home() {
           </Reveal>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
             <Reveal>
-              <div className="h-full rounded-adipa bg-gradient-to-br from-brand-cyan to-brand-purple p-6 text-white shadow-lg transition-transform hover:-translate-y-1">
+              <div className="h-full rounded-adipa bg-brand-lightBlue p-6 text-brand-navy shadow-lg transition-transform hover:-translate-y-1">
                 <div className="flex items-center gap-3">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/20 text-xl">
-                    🎬
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/60">
+                    <VideoCamera size={20} weight="bold" className="text-brand-purple" />
                   </span>
                   <h3 className="text-base font-semibold">Cómo iniciar tu video</h3>
                 </div>
-                <ul className="mt-4 space-y-3 text-[15px] text-white/90">
+                <ul className="mt-4 space-y-3 text-[15px] text-brand-navy/80">
                   <li className="flex items-start gap-2">
-                    <span aria-hidden="true">✅</span>
+                    <CheckCircle size={20} weight="fill" className="mt-0.5 shrink-0 text-brand-purple" />
                     <span>&ldquo;Tomé este curso sobre…&rdquo;</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span aria-hidden="true">✅</span>
+                    <CheckCircle size={20} weight="fill" className="mt-0.5 shrink-0 text-brand-purple" />
                     <span>&ldquo;Lo que más me gustó de ADIPA fue…&rdquo;</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span aria-hidden="true">✅</span>
+                    <CheckCircle size={20} weight="fill" className="mt-0.5 shrink-0 text-brand-purple" />
                     <span>&ldquo;Esto fue lo que me llevé de este curso/seminario&rdquo;</span>
                   </li>
                 </ul>
               </div>
             </Reveal>
             <Reveal delay={120}>
-              <div className="h-full rounded-adipa bg-brand-navy p-6 text-white shadow-lg transition-transform hover:-translate-y-1">
+              <div className="h-full rounded-adipa bg-brand-lavender p-6 text-brand-navy shadow-lg transition-transform hover:-translate-y-1">
                 <div className="flex items-center gap-3">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-xl">
-                    🚫
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/60">
+                    <Prohibit size={20} weight="bold" className="text-brand-purple" />
                   </span>
                   <h3 className="text-base font-semibold">Lo que no debe incluir tu video</h3>
                 </div>
-                <ul className="mt-4 space-y-3 text-[15px] text-white/80">
+                <ul className="mt-4 space-y-3 text-[15px] text-brand-navy/80">
                   <li className="flex items-start gap-2">
-                    <span aria-hidden="true">❌</span>
+                    <XCircle size={20} weight="fill" className="mt-0.5 shrink-0 text-brand-navy/60" />
                     <span>Promesas de resultados clínicos.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span aria-hidden="true">❌</span>
+                    <XCircle size={20} weight="fill" className="mt-0.5 shrink-0 text-brand-navy/60" />
                     <span>Guiones rígidos o frases obligatorias.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span aria-hidden="true">❌</span>
+                    <XCircle size={20} weight="fill" className="mt-0.5 shrink-0 text-brand-navy/60" />
                     <span>Lenguaje violento.</span>
                   </li>
                 </ul>
@@ -273,6 +277,25 @@ export default function Home() {
               <CountryBriefPicker />
             </Reveal>
           </div>
+          <Reveal delay={200}>
+            <div className="mt-6 flex items-start gap-4 rounded-adipa bg-white p-6 text-brand-navy shadow-lg">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-purple/10">
+                <Info size={22} weight="bold" className="text-brand-purple" />
+              </span>
+              <div>
+                <h3 className="text-lg font-semibold">A tener en cuenta</h3>
+                <p className="mt-2 text-[15px] leading-relaxed text-brand-navy/80">
+                  El curso debe ser <strong>asincrónico</strong> y su valor debe coincidir con uno
+                  de los siguientes; de lo contrario, la postulación no será tomada en cuenta:
+                </p>
+                <ul className="mt-3 space-y-1.5 text-[15px] text-brand-navy/80">
+                  <li>🇨🇴 Colombia — $80.000 COP</li>
+                  <li>🇲🇽 México — $540 MXN</li>
+                  <li>🇦🇷 Argentina — $40.000 ARS</li>
+                </ul>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 

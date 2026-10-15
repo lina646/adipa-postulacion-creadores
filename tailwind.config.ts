@@ -18,7 +18,7 @@ const config: Config = {
         sans: ["Poppins", "Helvetica", "sans-serif"],
       },
       borderRadius: {
-        adipa: "8px",
+        adipa: "20px",
       },
     },
   },

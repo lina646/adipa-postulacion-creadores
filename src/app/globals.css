@@ -18,7 +18,7 @@ body {
 .adipa-card {
   background: var(--adipa-card-bg);
   border: 1px solid var(--adipa-card-border);
-  border-radius: 8px;
+  border-radius: 20px;
   box-shadow: var(--adipa-card-shadow);
 }
 
